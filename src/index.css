@@ -1,5 +1,4 @@
 #root {
-  margin: 10px;
   display: flex;
   justify-content: center;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,13 +12,19 @@
   -webkit-text-size-adjust: 100%;
   width: 100vw;
   color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 20px;
 }
 body {
   background-color: #242424;
-  margin-top: calc(max(3.2vw, 32px));
+  margin-top: calc(max(4vw, 32px));
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer {
   z-index: -1;

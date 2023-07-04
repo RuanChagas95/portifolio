@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'
 import Header  from './components/Header/Header'
 import CreateProjectGroup from './components/projects/CreateProjectGroup'
+import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   // <iframe src="./projects/learning-to-write/index.html"></iframe>
@@ -14,7 +15,10 @@ function App() {
     <>
     <Header />
     <br /><br />
-    <CreateProjectGroup />
+    <main>
+        <AboutMe />
+      <CreateProjectGroup />
+    </main>
     <footer>Meu primeiro projeto usando React e TypeScript</footer>
     </>
   )

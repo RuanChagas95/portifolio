@@ -2,7 +2,6 @@ import { projectList, projectType } from './projectList'
 import './projectGroup.css'
 import ProjectDescribe from './ProjectDescribe/ProjectDescribe'
 
-let lastSelected : string = ''
 
 function CreateProjectGroup() {
     return (
@@ -17,7 +16,6 @@ function CreateProjectGroup() {
     function CreateBtnProject(project: projectType, index: number) {
         const { name, folder } = project
         const btnId = `btnradio${index}`
-        lastSelected = folder
         
         return (
             <>
