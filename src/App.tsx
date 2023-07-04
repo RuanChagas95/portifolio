@@ -15,7 +15,7 @@ function App() {
     <Header />
     <br /><br />
     <CreateProjectGroup />
-    <footer>Meu primeiro projeto usando React</footer>
+    <footer>Meu primeiro projeto usando React e TypeScript</footer>
     </>
   )
 }

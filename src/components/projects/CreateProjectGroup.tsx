@@ -1,7 +1,6 @@
 import { projectList, projectType } from './projectList'
 import './projectGroup.css'
 import ProjectDescribe from './ProjectDescribe/ProjectDescribe'
-import { useState } from 'react'
 
 let lastSelected : string = ''
 
