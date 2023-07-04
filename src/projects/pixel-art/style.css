@@ -1,0 +1,109 @@
+.color {
+  border: 1px;
+  border-style: solid;
+  width: 3vw;
+  height: 3vw;
+  display: inline-block;
+  margin: 2px;
+  border-radius: 100%;}
+  
+.pixel {
+  border: 1px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 1;
+  padding: 0;
+}
+  
+#color-palette {
+  display: inline;
+}
+  
+.row {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  line-height: 2px;
+  align-self: center;
+  
+}
+  
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(229, 187, 168, 0.95);
+  width: fit-content;
+  padding: 40px;
+  border-radius: 10%;
+  align-items: center;
+}
+  
+#pixel-board {
+  width: fit-content;
+  border-style: solid;
+}
+  
+#buttons-palette {
+  margin: 15px;
+}
+  
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('background.jpg');
+  background-size: 70vw 50vw;
+  background-position: 50% 10px;
+  background-color: #f6f6f6;
+  background-repeat: no-repeat;
+  
+}
+  
+h1 {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  border-radius: 70%;
+  font-size: 45px;
+  font-family: Lobster, sans-serif;
+  border-style: solid;
+}
+  
+  
+button {
+  background-color: white; /* Cor de fundo */
+  color: black; /* Cor do texto */
+  border-radius: 20px;
+  width: 10vw;
+  height: 2vw;
+  font-size: 1vw;
+}
+  
+div button {
+  border: 1px solid;
+  height: 1vw;
+  width: 1vw;
+  border-radius: 100%;
+}
+  
+button:hover {
+  background-color: gray;
+  color: white;
+}
+  
+input {
+  border-radius: 10px;
+  width: 3vw;
+  height: 1vw;
+  font-size: 1vw;
+}
+  
+#divPalette {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
