@@ -1,0 +1,15 @@
+.btn-group {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn {
+  color: rgba(255, 255, 255, 0.87);
+  border-color:rgba(255, 255, 255, 0.2)
+}
+.btn:hover {
+  color: rgba(200, 249, 255, 0.87)!important;
+  border-color:rgba(255, 255, 255, 0.8)!important
+}
+.projects {
+  text-align: center;
+  margin-bottom: 50px;
+}
