@@ -3,17 +3,17 @@ import './projectGroup.css'
 import ProjectDescribe from './ProjectDescribe/ProjectDescribe'
 
 
-function CreateProjectGroup() {
+function ProjectGroup() {
     return (
         <div className='projects'>
         <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
-           {projectList.map((project: projectType, index) => CreateBtnProject(project, index))}
+           {projectList.map((project: projectType, index) => BtnProject(project, index))}
         </div>
         {projectList.map((project: projectType) => <ProjectDescribe project={project}/>)}
 </div>
     )
    
-    function CreateBtnProject(project: projectType, index: number) {
+    function BtnProject(project: projectType, index: number) {
         const { name, folder } = project
         const btnId = `btnradio${index}`
         
@@ -26,4 +26,4 @@ function CreateProjectGroup() {
 }
 }
 
-export default CreateProjectGroup
+export default ProjectGroup
