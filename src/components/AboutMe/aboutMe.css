@@ -20,6 +20,7 @@ p {
     max-width: 33.33%;
     max-height: 167px;
     border-radius: 15%;
+    margin: 10px;
   }
   #about-me {
     display: flex;
@@ -31,8 +32,8 @@ p {
   #me-text {
     display: flex;
     max-width: 1000px;
-    margin-left: 20px;
     align-items: center;
+    margin: 10px;
   }
   h2 {
     margin: 0px
