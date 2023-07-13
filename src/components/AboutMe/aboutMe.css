@@ -1,8 +1,10 @@
 p {
   text-indent: 40px;
+  font-size:large;
 }
 #me-name {
   color: dimgray;
+  font-size: medium;
 }
 #me-photo {
   text-align: center;
@@ -19,7 +21,7 @@ p {
     max-height: 167px;
     border-radius: 15%;
   }
-  .container {
+  #about-me {
     display: flex;
     padding: 30px;
   }
@@ -27,7 +29,10 @@ p {
     padding: 0px 20px
   }
   #me-text {
+    display: flex;
     max-width: 1000px;
+    margin-left: 20px;
+    align-items: center;
   }
   h2 {
     margin: 0px
