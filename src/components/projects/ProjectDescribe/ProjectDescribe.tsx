@@ -9,7 +9,7 @@ export default function ProjectDescribe() {
     }
     const {describe} = project
         return (<>
-            <div>
+            <div className="project">
             <div className="container"><p>{describe}</p></div>
             <iframe src={`/src/components/projects/${folder}/`}></iframe>
         </div>
