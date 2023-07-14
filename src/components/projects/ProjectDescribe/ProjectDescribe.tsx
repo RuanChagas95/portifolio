@@ -1,12 +1,17 @@
-import { projectType } from "../projectList";
+import { projectList } from "../projectList";
 import './projectDescribe.css'
-export default function ProjectDescribe(props: {project: projectType}) {
-    const { project } = props    
-        const { folder, describe } = project      
+import { useParams } from "react-router-dom";
+export default function ProjectDescribe() {
+    const { project: folder } = useParams()
+    const project = projectList.find((project) => project.folder === folder)
+    if (!project){
+        return false
+    }
+    const {describe} = project
         return (<>
-            <div  id={`project-describe-${folder}`} className={`collapse project-describe ${folder}`} aria-expanded="false">
+            <div>
             <div className="container"><p>{describe}</p></div>
-            <iframe src={`./src/components/projects/${folder}/`}></iframe>
+            <iframe src={`/src/components/projects/${folder}/`}></iframe>
         </div>
         </>
     )

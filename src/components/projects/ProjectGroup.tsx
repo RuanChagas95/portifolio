@@ -1,29 +1,31 @@
 import { projectList, projectType } from './projectList'
 import './projectGroup.css'
-import ProjectDescribe from './ProjectDescribe/ProjectDescribe'
+import { useNavigate, useParams } from 'react-router-dom'
+
 
 
 function ProjectGroup() {
+    const navigate = useNavigate()
+    const params = useParams()
+
+    const handleCLick = (folder: string) => {
+        navigate(`projects/${folder}`)
+    }
     return (
         <div className='projects'>
-        <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
-           {projectList.map((project: projectType, index) => BtnProject(project, index))}
+            <div className="btn-group" role="group" aria-label="Projects">
+
+                {projectList.map((project: projectType) => {
+                    return (<button key={project.folder}
+                        className={`btn btn-primary ${project.folder === params.project ? 'active' : ''}`}
+                        onClick={() => handleCLick(project.folder)}>
+                        {project.name}
+                    </button>)
+                })}
+            </div>
+
         </div>
-        {projectList.map((project: projectType) => <ProjectDescribe project={project}/>)}
-</div>
     )
-   
-    function BtnProject(project: projectType, index: number) {
-        const { name, folder } = project
-        const btnId = `btnradio${index}`
-        
-        return (
-            <>
-        <input type="radio" className="btn-check" name="btnradio"  data-bs-toggle="collapse" id={btnId} data-bs-target={`.project-describe.${folder}, .project-describe.show`} aria-controls={`.project-describe`} aria-expanded="false"></input>
-        <label className="btn btn-outline-primary" htmlFor={btnId}>{ name } </label>
-        </>
-    )
-}
 }
 
 export default ProjectGroup

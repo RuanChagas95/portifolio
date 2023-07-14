@@ -1,21 +1,20 @@
-// import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'
-import Header  from './components/Header/Header'
-import ProjectGroup from './components/projects/ProjectGroup'
-import AboutMe from './components/AboutMe/AboutMe';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import ProjectDescribe from './components/projects/ProjectDescribe/ProjectDescribe';
 
 function App() {
   return (
-    <>
-    <Header />
-    <main>
-        <AboutMe />
-      <ProjectGroup />
-    </main>
-    <footer>Meu primeiro projeto usando React e TypeScript</footer>
-    </>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route path='projects/:project' element={<ProjectDescribe />}/>
+      </Route>
+      <Route path='/*'element={<Layout />}/>
+
+    </Routes>
+
   )
 }
 

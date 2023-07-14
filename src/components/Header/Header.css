@@ -23,3 +23,7 @@ h1 {
   min-width: 32px;
   line-height: 100%;
 }
+a {
+  all: unset;
+  cursor: pointer;
+}
