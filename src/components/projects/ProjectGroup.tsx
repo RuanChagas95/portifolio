@@ -1,15 +1,17 @@
 import { projectList, projectType } from './projectList'
 import './projectGroup.css'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
 
 
 
 function ProjectGroup() {
     const navigate = useNavigate()
+    const { pathname } = useLocation()
     const params = useParams()
 
     const handleCLick = (folder: string) => {
-        navigate(`projects/${folder}`)
+        const path = `/projects/${folder}`
+        navigate(path !== pathname ? path : '/projects')
     }
     return (
         <div className='projects'>
