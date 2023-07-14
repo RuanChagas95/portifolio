@@ -4,6 +4,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import ProjectDescribe from './components/projects/ProjectDescribe/ProjectDescribe';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route path='projects/:project' element={<ProjectDescribe />}/>
       </Route>
-      <Route path='*'element={<Layout />}/>
+      <Route path='*'element={<NotFound />}/>
 
     </Routes>
 

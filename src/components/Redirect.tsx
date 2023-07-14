@@ -8,6 +8,6 @@ export default function Redirect() {
         if (path !== url) {
           navigate(path);
         }
-      }, [url]);
+      });
   return null
 }
