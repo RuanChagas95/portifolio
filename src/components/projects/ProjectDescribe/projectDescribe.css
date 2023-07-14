@@ -7,17 +7,11 @@ iframe {
   height: 100vh;
   border-radius: 20px;
 }
-.collapse {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
 .container {
   align-self: center;
   border: 2px solid rgba(255, 255, 255, 0.123);
   border-radius: 20px;
   padding: 40px;
-  margin: 20px;
 }
 .container p {
   width: 100%;
