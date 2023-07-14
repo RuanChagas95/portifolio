@@ -11,7 +11,7 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route path='projects/:project' element={<ProjectDescribe />}/>
       </Route>
-      <Route path='/*'element={<Layout />}/>
+      <Route path='*'element={<Layout />}/>
 
     </Routes>
 
