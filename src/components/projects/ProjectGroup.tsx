@@ -14,7 +14,7 @@ function ProjectGroup() {
         navigate(path !== pathname ? path : '/projects')
     }
     return (
-        <div className='projects'>
+        <div className='container'>
             <div className="btn-group" role="group" aria-label="Projects">
 
                 {projectList.map((project: projectType) => {

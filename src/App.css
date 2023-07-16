@@ -2,3 +2,19 @@
   padding: 0;
   margin: 0px;
 }
+.container {
+  box-sizing: border-box;
+  display: flex;
+  border: 2px solid rgba(255, 255, 255, 0.123);
+  border-radius: 20px;
+  padding: 1vw;
+  margin: 15px;
+  max-width: calc(100% - 4vw);
+  max-height: calc(100% - 4vw);
+  justify-content: center;
+  width: fit-content;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
