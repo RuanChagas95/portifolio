@@ -9,6 +9,8 @@ const Container = styled.div`
 const AboutMeContainer = styled.div`
   display: flex;
   padding: 30px;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 759px) {
     flex-direction: column;
