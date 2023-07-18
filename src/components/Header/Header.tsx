@@ -1,20 +1,52 @@
-import './Header.css'
-import { Link } from 'react-router-dom'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const HeaderContainer = styled.header`
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #373b3e;
+  align-items: center;
+`;
+
+const SvgIcon = styled.svg`
+  min-height: 20px;
+  min-width: 20px;
+  height: 2vw;
+  width: 2vw;
+  vertical-align: middle;
+  color: #000;
+`;
+
+const Name = styled.h1`
+  margin: 0 2%;
+  font-size: calc(max(2.5vw, 20px));
+  min-width: 32px;
+  line-height: 100%;
+`;
+
 function Header() {
-    //lint-ignore-next-line
-    const path =  <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-    
-    return <header>
-        <h1 id='name'>
+  const path = (
+    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+  );
+
+  return (
+    <HeaderContainer>
+      <Name>
         <Link to='/'>
-            Ruan Gomes das Chagas Silva
+          Ruan Gomes das Chagas Silva
         </Link>
-            </h1>        
-        <a href="https://github.com/RuanChagas95" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16">
-            { path}
-        </svg>
-        </a>
-    </header>
+      </Name>
+      <a href="https://github.com/RuanChagas95" target="_blank">
+        <SvgIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          {path}
+        </SvgIcon>
+      </a>
+    </HeaderContainer>
+  );
 }
-export default Header
+
+export default Header;
