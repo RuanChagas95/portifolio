@@ -37,7 +37,7 @@ function Header() {
     <HeaderContainer>
       <Name>
         <Link to='/'>
-          Ruan Gomes das Chagas Silva
+          Ruan Chagas
         </Link>
       </Name>
       <a href="https://github.com/RuanChagas95" target="_blank">
