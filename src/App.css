@@ -12,6 +12,7 @@
   max-width: calc(100% - 4vw);
   max-height: calc(100% - 4vw);
   justify-content: center;
+  width: fit-content;
 }
 .column {
   display: flex;
