@@ -18,7 +18,10 @@ const AboutMeContainer = styled.div`
 `;
 
 const MePhoto = styled.div`
-  text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
   max-width: 33.33%;
   max-height: 167px;
   border-radius: 15%;
@@ -34,6 +37,8 @@ const MeText = styled.div`
   display: flex;
   align-items: center;
   margin: 10px;
+  text-align: center;
+
 `;
 
 const MeName = styled.h5`
@@ -65,9 +70,7 @@ function AboutMe() {
       <AboutMeContainer className="container">
         <MePhoto>
           <Photo src={imgLink} alt="Foto de perfil de Ruan Chagas" />
-          <div>
             <MeName><em>Ruan Chagas</em></MeName>
-          </div>
         </MePhoto>
         <MeText>
           <TextStart>
