@@ -1,7 +1,13 @@
 import { projectList } from "../projectList";
-import './projectDescribe.css'
 import { useParams } from "react-router-dom";
 import { useRef, useState } from "react";
+import styled from 'styled-components';
+
+const StyledIframe =  styled.iframe`
+    width: 100%;
+  border-radius: 20px;
+`
+
 export default function ProjectDescribe() {
     const { project: folder } = useParams()
     const project = projectList.find((project) => project.folder === folder)
@@ -19,7 +25,7 @@ export default function ProjectDescribe() {
         return (<>
             <div className="container column">
             <div className="container text-center"><p>{describe}</p></div>
-            <iframe height={height + 'px'} onLoad={adjustHeigthSize} ref={projectRef} src={`/src/components/projects/${folder}/`}></iframe>
+            <StyledIframe height={height + 'px'} onLoad={adjustHeigthSize} ref={projectRef} src={`/src/components/projects/${folder}/`} />
         </div>
         </>
     )
